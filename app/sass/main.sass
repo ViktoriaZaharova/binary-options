@@ -1,0 +1,559 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #222629
+  color: #fff
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0
+  box-sizing: border-box
+
+.container
+  max-width: 1270px
+  width: 100%
+  margin: 0 auto
+  padding: 0 15px
+  display: flex
+  flex-wrap: wrap
+  position: relative
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 19px
+  font-size: 30px
+  font-weight: bold
+  width: 100%
+  max-width: 350px
+
+.btn-accent
+  background: $accent
+  border-radius: 100px
+  color: #222629
+
+  &:hover
+    color: #222629
+    background: #fff
+
+h1
+  text-transform: uppercase
+  width: 100%
+  margin: 0 0 30px
+  font-size: 85px
+  font-weight: bold
+  color: #fff
+
+h2
+  width: 100%
+  display: block
+  font-size: 60px
+  line-height: 73px
+  font-weight: bold
+  color: #fff
+  margin: 0 auto 30px
+  text-align: center
+  text-transform: uppercase
+
+
+.subtitle
+  width: 100%
+  text-align: center
+  color: rgba(255, 255, 255, 0.15)
+  font-size: 40px
+  margin: 0 auto 30px
+  text-transform: uppercase
+
+.bg-white
+  background: #FFFFFF
+  color: #222629
+  .subtitle
+    color: rgba(34, 38, 41, 0.15)
+  h2
+    color: #222629
+
+.w-100
+  width: 100%
+
+.p-100
+  padding: 100px 0
+
+.section-wrapper
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+
+//header
+header
+  padding: 64px 0 42px
+
+  .container
+    align-items: center
+
+.logo
+  color: #F0F0F1
+  display: flex
+  align-items: center
+  font-size: 35.6825px
+  font-weight: bold
+  margin: 0 auto 0 0
+
+.logo-text
+  margin: 0 0 0 8px
+
+.btn-burger
+  display: none
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  width: 20px
+  height: 14px
+  cursor: pointer
+
+  span
+    display: block
+    width: 100%
+    height: 2px
+    background: #fff
+
+
+.menu
+  font-size: 18px
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+  li
+    margin: 0 80px 0 0
+
+    &:last-child
+      margin: 0
+
+    a
+      color: #DCDCDC
+
+      &:hover
+        color: $accent
+
+//main
+main
+  color: #fff
+  padding: 0 0 100px
+
+.main-wrap
+  width: 100%
+  border-radius: 30px
+  background: linear-gradient(0deg, rgba(34, 38, 41, 0.5), rgba(34, 38, 41, 0.5)), url('../img/bg1.jpeg') no-repeat center
+    size: cover
+  padding: 100px 50px 242px
+
+  h1
+    max-width: 815px
+    width: 100%
+
+  .box-text
+    font-size: 30px
+    margin: 0 0 60px
+    max-width: 741px
+    width: 100%
+    text-align: left
+
+.advantages-main
+  width: calc(100% - 120px)
+  margin: -100px auto 0
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  background: radial-gradient(151.64% 120.36% at 47.19% -0.63%, rgba(48, 52, 55, 0.5) 0%, rgba(48, 52, 55, 0.5) 100%)
+  backdrop-filter: blur(30px)
+  border-radius: 40px
+  padding: 50px 65px
+
+.advantages-main-box
+  display: flex
+  align-items: center
+  font-size: 30px
+  line-height: 35px
+  p
+    max-width: 225px
+
+.advantages-main-box__icon
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 20px 0 0
+  width: 70px
+  height: 70px
+  min-width: 70px
+  border: 2px solid #FFFFFF
+    radius: 6px
+  padding: 15px
+
+//mercado
+.mercado
+  padding: 100px 0 80px
+  .box-text
+    margin: 0 auto 110px
+  h2
+    max-width: 757px
+  .subtitle
+    text-transform: none
+
+.mercado-box
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  font-size: 25px
+  line-height: 150%
+  &__text
+    width: calc(100% - 90px)
+    padding: 0 0 0 20px
+    max-width: 320px
+
+.mercado-box__icon
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  background: $accent
+  width: 90px
+  height: 90px
+
+
+.box-text
+  margin: 0 auto 0
+  max-width: 738px
+  width: 100%
+  text-align: center
+  font-size: 25px
+  line-height: 150%
+
+//work
+.work
+  h2
+    max-width: 840px
+  .box-text
+    max-width: 960px
+    margin: 0 auto 100px
+
+.work-text
+  width: calc(100% - 500px)
+  padding: 0 200px 0 0
+  .btn
+    margin: 55px 0 0 80px
+
+.work-img
+  position: relative
+  overflow: hidden
+  border-radius: 30px
+  width: 100%
+  max-width: 500px
+  height: 750px
+  display: flex
+  align-items: center
+  justify-content: center
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(0deg, rgba(34, 38, 41, 0.2), rgba(34, 38, 41, 0.2))
+    z-index: 1
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.list-check
+  line-height: 150%
+  font-size: 25px
+  li
+    position: relative
+    margin: 0 0 60px
+    padding: 0 0 0 80px
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translate(0,-50%)
+      width: 50px
+      height: 50px
+      background: url("../img/check.svg") no-repeat center
+        size: 100%
+    &:last-child
+      margin: 0
+
+//.autonomia
+.autonomia
+  padding: 100px 0 0
+  .section-wrapper
+    align-items: stretch
+  .box-text
+    max-width: 703px
+    margin: 0 auto 100px
+
+.autonomia-box
+  backdrop-filter: blur(30px)
+  border-radius: 40px
+  max-width: 565px
+  width: 100%
+  margin: 0 0 110px
+  padding: 40px
+  background: #222629
+  color: #fff
+  .box-text
+    margin: 0
+    text-align: left
+  h3
+    margin: 20px 0
+    font-weight: bold
+    font-size: 40px
+  &__num
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    background: $accent
+    border-radius: 50px
+    width: 100px
+    height: 50px
+    font-size: 25px
+    font-weight: bold
+    color: #222629
+
+//.reviews
+.reviews
+  .box-text
+    max-width: 695px
+
+.reviews-slider
+  margin: 100px auto 0
+  padding: 0 43px
+
+.slick-slide
+  outline: none
+
+.slick-arrow
+  position: absolute
+  top: 50%
+  transform: translate(0,-50%)
+  cursor: pointer
+  transition: .3s ease
+  padding: 0
+  background: transparent
+  width: 19px
+  height: 34px
+  display: flex
+  align-items: center
+  justify-content: center
+  border: none
+  box-shadow: none
+
+.slick-prev
+  background: url("../img/arrow-left.svg") no-repeat center
+    size: 100%
+  left: 0
+
+.slick-next
+  background: url("../img/arrow-right.svg") no-repeat center
+    size: 100%
+  right: 0
+
+.reviews-box
+  margin: 0 auto
+  max-width: 375px
+  width: 100%
+  background: radial-gradient(151.64% 120.36% at 47.19% -0.63%, rgba(48, 52, 55, 0.5) 0%, rgba(48, 52, 55, 0.5) 100%)
+  border-radius: 40px
+  backdrop-filter: blur(30px)
+  padding: 40px
+  height: 100%
+  min-height: 400px
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  &__bottom
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: auto 0 0
+  &__date
+    color: rgba(255, 255, 255, 0.15)
+    font-size: 14px
+    font-style: italic
+  &__author
+    font-size: 20px
+    font-style: italic
+
+
+.list-rating
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 0 40px
+  li
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 21px
+    height: 20px
+    margin: 0 20px 0 0
+    &:last-child
+      margin: 0
+
+.reviews-box__text
+  font-style: italic
+  font-size: 20px
+
+//bot-callback
+.bot-callback
+  padding: 50px 0 0
+
+.bot-callback__text
+  padding: 65px 0 0
+  max-width: 560px
+  width: 100%
+  h2
+    text-align: left
+  .box-text
+    text-align: left
+    margin: 0 0 60px
+
+.bot-callback__img
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  max-width: 390px
+  width: 100%
+  margin: 0 0 0 auto
+
+
+//footer
+footer
+  padding: 55px 0 113px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    bottom: 51px
+    left: 50%
+    transform: translate(-50%,0)
+    max-width: 1240px
+    width: 100%
+    height: 1px
+    background: url("../img/line-footer.svg") no-repeat center
+      size: 100%
+
+.footer-bottom
+  display: none
+  color: #86888A
+  font-size: 12px
+  font-weight: 500
+
+.copyright
+  margin: 0 auto
+  font-family: 'Montserrat', sans-serif
+
+@import "media"
+// Всегда в конце
